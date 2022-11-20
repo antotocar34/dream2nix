@@ -1,2 +1,5 @@
 test:
-    nix run .#tests-integration-d2n-flakes
+    nix run path:/home/carneca/Documents/projects/dream2nix#tests-integration-d2n-flakes
+
+ltest:
+    nix eval .

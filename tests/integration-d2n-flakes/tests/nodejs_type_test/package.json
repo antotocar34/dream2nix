@@ -1,11 +1,10 @@
 {
-  "name": "test",
+  "name": "test-built-binary",
   "version": "1.0.0",
-  "scripts": {
-    "get-version": "svgo --version > VERSION"
+  "bin": {
+    "main": "./main.js"
   },
-  "devDependencies": {
-    "svgo": "2.8.0",
-    "cssnano": "4.1.10"
+  "scripts": {
+    "build": "touch main.js"
   }
 }

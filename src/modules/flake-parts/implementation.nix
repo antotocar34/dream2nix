@@ -28,7 +28,7 @@ in {
       outputs =
         l.mapAttrs
         (_: args: instance.makeOutputs args)
-        config.dream2nix.inputs;
+        (l.debug.traceVal config.dream2nix.inputs);
 
       getAttrFromOutputs = attrName:
         l.mkMerge (

@@ -23,8 +23,8 @@
   }: (dream2nix.lib.makeFlakeOutputs {
     systems = ["x86_64-linux"];
     config.projectRoot = ./.;
-    # source = ./.;
-    source = 33 + 2;
+    source = ./.;
+    # source = 33 + 2;
     packageOverrides = {
       test = {
         "check-linked-bin-version" = {
@@ -43,6 +43,6 @@
         };
       };
     };
-    # sourceOverrides = "ho"; # FIXME check that this works
+    sourceOverrides = "ho"; # FIXME check that this works
   });
 }
