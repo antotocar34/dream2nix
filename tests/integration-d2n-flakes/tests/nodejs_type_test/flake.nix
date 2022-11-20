@@ -14,7 +14,7 @@
 #
 {
   inputs = {
-    dream2nix.url = "github:nix-community/dream2nix";
+    dream2nix.url = "path:../../../../";
   };
 
   outputs = {
@@ -23,7 +23,8 @@
   }: (dream2nix.lib.makeFlakeOutputs {
     systems = ["x86_64-linux"];
     config.projectRoot = ./.;
-    source = ./.;
+    # source = ./.;
+    source = 33 + 2;
     packageOverrides = {
       test = {
         "check-linked-bin-version" = {
@@ -42,5 +43,6 @@
         };
       };
     };
+    # sourceOverrides = "ho"; # FIXME check that this works
   });
 }

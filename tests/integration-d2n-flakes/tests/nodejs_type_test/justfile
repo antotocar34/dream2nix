@@ -1,0 +1,2 @@
+test:
+    nix run .#tests-integration-d2n-flakes
